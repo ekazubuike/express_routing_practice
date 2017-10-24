@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				font-family: 'Helvetica', 'Arial', sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="/fav_color" method="POST">
+			<% colors.forEach(function(color){ %>
+				<p>
+					<input type="radio" name="fave" value="<%= color %>"><%= color %></input>
+				</p>
+			<% }); %>
+			<button>Submit</button>
+		</form>
+	</body>
+</html>

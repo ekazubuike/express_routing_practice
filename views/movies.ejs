@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				font-family: 'Helvetica', 'Arial', sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Movies:</h1>
+		<ul>
+			<% if (movies) { %>
+				<% movies.forEach(function(movie){ %>
+					<li><a href="https://www.imdb.com/title/<%= movie.imdb %>"><%= movie.title %>, <%= movie.year %></a></li>
+				<% }); %>
+			<% } else { %>
+				<li>No moves found.</li>
+			<% } %>
+		</ul>
+	</body>
+</html>
